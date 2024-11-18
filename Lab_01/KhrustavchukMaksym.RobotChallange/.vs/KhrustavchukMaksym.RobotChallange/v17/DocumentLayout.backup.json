@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3808AA0A-FC53-4C43-89F1-7487AFD60212}|KhrustavchukMaksym.RobotChallange.csproj|D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3808AA0A-FC53-4C43-89F1-7487AFD60212}|KhrustavchukMaksym.RobotChallange.csproj|solutionrelative:functions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}|..\\KhrustavchukMaksym.RobotChallengeTest\\KhrustavchukMaksym.RobotChallengeTest.csproj|d:\\univer\\sem_05\\kpz\\lab_01\\khrustavchukmaksym.robotchallengetest\\commontests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3808AA0A-FC53-4C43-89F1-7487AFD60212}|KhrustavchukMaksym.RobotChallange.csproj|d:\\univer\\sem_05\\kpz\\lab_01\\khrustavchukmaksym.robotchallange\\khrustavchukmaksymalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3808AA0A-FC53-4C43-89F1-7487AFD60212}|KhrustavchukMaksym.RobotChallange.csproj|solutionrelative:khrustavchukmaksymalgorithm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Functions.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\Functions.cs",
+              "RelativeDocumentMoniker": "Functions.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\Functions.cs",
+              "RelativeToolTip": "Functions.cs",
+              "ViewState": "AgIAAF4AAAAAAAAAAADgv2wAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T18:10:14.657Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhrustavchukMaksymAlgorithm.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\KhrustavchukMaksymAlgorithm.cs",
+              "RelativeDocumentMoniker": "KhrustavchukMaksymAlgorithm.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallange\\KhrustavchukMaksymAlgorithm.cs",
+              "RelativeToolTip": "KhrustavchukMaksymAlgorithm.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA7wBoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T16:05:52.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommonTests.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallengeTest\\CommonTests.cs",
+              "RelativeDocumentMoniker": "..\\KhrustavchukMaksym.RobotChallengeTest\\CommonTests.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\Lab_01\\KhrustavchukMaksym.RobotChallengeTest\\CommonTests.cs",
+              "RelativeToolTip": "..\\KhrustavchukMaksym.RobotChallengeTest\\CommonTests.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAswHkAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T15:45:44.829Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

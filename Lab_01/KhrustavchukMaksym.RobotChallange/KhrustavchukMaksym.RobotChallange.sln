@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhrustavchukMaksym.RobotChallange", "KhrustavchukMaksym.RobotChallange.csproj", "{3808AA0A-FC53-4C43-89F1-7487AFD60212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KhrustavchukMaksym.RobotChallengeTest", "..\KhrustavchukMaksym.RobotChallengeTest\KhrustavchukMaksym.RobotChallengeTest.csproj", "{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3808AA0A-FC53-4C43-89F1-7487AFD60212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3808AA0A-FC53-4C43-89F1-7487AFD60212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3808AA0A-FC53-4C43-89F1-7487AFD60212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3808AA0A-FC53-4C43-89F1-7487AFD60212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD3EE54C-BB2C-4452-B06C-FA914D5A4100}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {389A455A-A833-47F7-82D7-D7C07018F420}
+	EndGlobalSection
+EndGlobal

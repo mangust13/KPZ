@@ -1,0 +1,8 @@
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\bin\Debug\KhrustavchukMaksym.RobotChallange.dll
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\bin\Debug\KhrustavchukMaksym.RobotChallange.pdb
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\bin\Debug\Robot.Common.dll
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\obj\Debug\KhrustavchukMaksym.RobotChallange.csproj.AssemblyReference.cache
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\obj\Debug\KhrustavchukMaksym.RobotChallange.csproj.CoreCompileInputs.cache
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\obj\Debug\Khrustav.37162FC9.Up2Date
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\obj\Debug\KhrustavchukMaksym.RobotChallange.dll
+D:\Univer\Sem_05\KPZ\Lab_01\KhrustavchukMaksym.RobotChallange\obj\Debug\KhrustavchukMaksym.RobotChallange.pdb
