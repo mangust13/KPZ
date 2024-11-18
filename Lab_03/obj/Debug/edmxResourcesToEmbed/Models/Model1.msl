@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sportComplexModelStoreContainer" CdmEntityContainer="sportComplexEntities">
+    <EntitySetMapping Name="ActivityTypes">
+      <EntityTypeMapping TypeName="sportComplexModel.ActivityTypes">
+        <MappingFragment StoreEntitySet="ActivityTypes">
+          <ScalarProperty Name="activity_type_id" ColumnName="activity_type_id" />
+          <ScalarProperty Name="activity_name" ColumnName="activity_name" />
+          <ScalarProperty Name="activity_description" ColumnName="activity_description" />
+          <ScalarProperty Name="activity_price" ColumnName="activity_price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cities">
+      <EntityTypeMapping TypeName="sportComplexModel.Cities">
+        <MappingFragment StoreEntitySet="Cities">
+          <ScalarProperty Name="city_id" ColumnName="city_id" />
+          <ScalarProperty Name="city_name" ColumnName="city_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Clients">
+      <EntityTypeMapping TypeName="sportComplexModel.Clients">
+        <MappingFragment StoreEntitySet="Clients">
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="client_full_name" ColumnName="client_full_name" />
+          <ScalarProperty Name="client_gender" ColumnName="client_gender" />
+          <ScalarProperty Name="client_phone_number" ColumnName="client_phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Gyms">
+      <EntityTypeMapping TypeName="sportComplexModel.Gyms">
+        <MappingFragment StoreEntitySet="Gyms">
+          <ScalarProperty Name="gym_id" ColumnName="gym_id" />
+          <ScalarProperty Name="gym_number" ColumnName="gym_number" />
+          <ScalarProperty Name="gym_capacity" ColumnName="gym_capacity" />
+          <ScalarProperty Name="sports_complex_id" ColumnName="sports_complex_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PaymentMethods">
+      <EntityTypeMapping TypeName="sportComplexModel.PaymentMethods">
+        <MappingFragment StoreEntitySet="PaymentMethods">
+          <ScalarProperty Name="payment_method_id" ColumnName="payment_method_id" />
+          <ScalarProperty Name="payment_method" ColumnName="payment_method" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Purchases">
+      <EntityTypeMapping TypeName="sportComplexModel.Purchases">
+        <MappingFragment StoreEntitySet="Purchases">
+          <ScalarProperty Name="purchase_id" ColumnName="purchase_id" />
+          <ScalarProperty Name="client_id" ColumnName="client_id" />
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+          <ScalarProperty Name="payment_method_id" ColumnName="payment_method_id" />
+          <ScalarProperty Name="purchase_number" ColumnName="purchase_number" />
+          <ScalarProperty Name="purchase_date" ColumnName="purchase_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SportComplexes">
+      <EntityTypeMapping TypeName="sportComplexModel.SportComplexes">
+        <MappingFragment StoreEntitySet="SportComplexes">
+          <ScalarProperty Name="sports_complex_id" ColumnName="sports_complex_id" />
+          <ScalarProperty Name="complex_address" ColumnName="complex_address" />
+          <ScalarProperty Name="complex_city_id" ColumnName="complex_city_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionActivityTypes">
+      <EntityTypeMapping TypeName="sportComplexModel.SubscriptionActivityTypes">
+        <MappingFragment StoreEntitySet="SubscriptionActivityTypes">
+          <ScalarProperty Name="subscription_activity_type_id" ColumnName="subscription_activity_type_id" />
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+          <ScalarProperty Name="activity_type_id" ColumnName="activity_type_id" />
+          <ScalarProperty Name="activity_type_amount" ColumnName="activity_type_amount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="sportComplexModel.Subscriptions">
+        <MappingFragment StoreEntitySet="Subscriptions">
+          <ScalarProperty Name="subscription_id" ColumnName="subscription_id" />
+          <ScalarProperty Name="subscription_term_id" ColumnName="subscription_term_id" />
+          <ScalarProperty Name="subscription_vissit_time_id" ColumnName="subscription_vissit_time_id" />
+          <ScalarProperty Name="subscription_total_cost" ColumnName="subscription_total_cost" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionTerms">
+      <EntityTypeMapping TypeName="sportComplexModel.SubscriptionTerms">
+        <MappingFragment StoreEntitySet="SubscriptionTerms">
+          <ScalarProperty Name="subscription_term_id" ColumnName="subscription_term_id" />
+          <ScalarProperty Name="subscription_term" ColumnName="subscription_term" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SubscriptionVisitTimes">
+      <EntityTypeMapping TypeName="sportComplexModel.SubscriptionVisitTimes">
+        <MappingFragment StoreEntitySet="SubscriptionVisitTimes">
+          <ScalarProperty Name="subscription_visit_time_id" ColumnName="subscription_visit_time_id" />
+          <ScalarProperty Name="subscription_visit_time" ColumnName="subscription_visit_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="sportComplexModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrainerActivities">
+      <EntityTypeMapping TypeName="sportComplexModel.TrainerActivities">
+        <MappingFragment StoreEntitySet="TrainerActivities">
+          <ScalarProperty Name="trainer_activity_id" ColumnName="trainer_activity_id" />
+          <ScalarProperty Name="trainer_id" ColumnName="trainer_id" />
+          <ScalarProperty Name="activity_type_id" ColumnName="activity_type_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainers">
+      <EntityTypeMapping TypeName="sportComplexModel.Trainers">
+        <MappingFragment StoreEntitySet="Trainers">
+          <ScalarProperty Name="trainer_id" ColumnName="trainer_id" />
+          <ScalarProperty Name="sports_complex_id" ColumnName="sports_complex_id" />
+          <ScalarProperty Name="trainer_full_name" ColumnName="trainer_full_name" />
+          <ScalarProperty Name="trainer_gender" ColumnName="trainer_gender" />
+          <ScalarProperty Name="trainer_phone_number" ColumnName="trainer_phone_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Trainings">
+      <EntityTypeMapping TypeName="sportComplexModel.Trainings">
+        <MappingFragment StoreEntitySet="Trainings">
+          <ScalarProperty Name="training_id" ColumnName="training_id" />
+          <ScalarProperty Name="training_start_date_time" ColumnName="training_start_date_time" />
+          <ScalarProperty Name="training_end_date_time" ColumnName="training_end_date_time" />
+          <ScalarProperty Name="trainer_id" ColumnName="trainer_id" />
+          <ScalarProperty Name="gym_id" ColumnName="gym_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

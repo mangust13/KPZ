@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sportComplexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ActivityTypes">
+    <Key>
+      <PropertyRef Name="activity_type_id" />
+    </Key>
+    <Property Name="activity_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="activity_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="activity_description" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="activity_price" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="SubscriptionActivityTypes" Relationship="Self.FK__Subscript__activ__27C4AFC5" FromRole="ActivityTypes" ToRole="SubscriptionActivityTypes" />
+    <NavigationProperty Name="TrainerActivities" Relationship="Self.FK__TrainerAc__activ__23F41EE1" FromRole="ActivityTypes" ToRole="TrainerActivities" />
+  </EntityType>
+  <EntityType Name="Cities">
+    <Key>
+      <PropertyRef Name="city_id" />
+    </Key>
+    <Property Name="city_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="city_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="SportComplexes" Relationship="Self.FK__SportComp__compl__7AF2094E" FromRole="Cities" ToRole="SportComplexes" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="client_id" />
+    </Key>
+    <Property Name="client_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="client_full_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="client_gender" Type="Boolean" />
+    <Property Name="client_phone_number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Purchases" Relationship="Self.FK__Purchases__clien__14B1DB51" FromRole="Clients" ToRole="Purchases" />
+  </EntityType>
+  <EntityType Name="Gyms">
+    <Key>
+      <PropertyRef Name="gym_id" />
+    </Key>
+    <Property Name="gym_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gym_number" Type="Int32" />
+    <Property Name="gym_capacity" Type="Int32" />
+    <Property Name="sports_complex_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SportComplexes" Relationship="Self.FK__Gyms__sports_com__7FB6BE6B" FromRole="Gyms" ToRole="SportComplexes" />
+    <NavigationProperty Name="Trainings" Relationship="Self.FK__Trainings__gym_i__20238DFD" FromRole="Gyms" ToRole="Trainings" />
+  </EntityType>
+  <EntityType Name="PaymentMethods">
+    <Key>
+      <PropertyRef Name="payment_method_id" />
+    </Key>
+    <Property Name="payment_method_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="payment_method" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Purchases" Relationship="Self.FK__Purchases__payme__169A23C3" FromRole="PaymentMethods" ToRole="Purchases" />
+  </EntityType>
+  <EntityType Name="Purchases">
+    <Key>
+      <PropertyRef Name="purchase_id" />
+    </Key>
+    <Property Name="purchase_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="client_id" Type="Int32" Nullable="false" />
+    <Property Name="subscription_id" Type="Int32" Nullable="false" />
+    <Property Name="payment_method_id" Type="Int32" Nullable="false" />
+    <Property Name="purchase_number" Type="Int32" />
+    <Property Name="purchase_date" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Clients" Relationship="Self.FK__Purchases__clien__14B1DB51" FromRole="Purchases" ToRole="Clients" />
+    <NavigationProperty Name="PaymentMethods" Relationship="Self.FK__Purchases__payme__169A23C3" FromRole="Purchases" ToRole="PaymentMethods" />
+    <NavigationProperty Name="Subscriptions" Relationship="Self.FK__Purchases__subsc__15A5FF8A" FromRole="Purchases" ToRole="Subscriptions" />
+  </EntityType>
+  <EntityType Name="SportComplexes">
+    <Key>
+      <PropertyRef Name="sports_complex_id" />
+    </Key>
+    <Property Name="sports_complex_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="complex_address" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="complex_city_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cities" Relationship="Self.FK__SportComp__compl__7AF2094E" FromRole="SportComplexes" ToRole="Cities" />
+    <NavigationProperty Name="Gyms" Relationship="Self.FK__Gyms__sports_com__7FB6BE6B" FromRole="SportComplexes" ToRole="Gyms" />
+    <NavigationProperty Name="Trainers" Relationship="Self.FK__Trainers__sports__047B7388" FromRole="SportComplexes" ToRole="Trainers" />
+  </EntityType>
+  <EntityType Name="SubscriptionActivityTypes">
+    <Key>
+      <PropertyRef Name="subscription_activity_type_id" />
+    </Key>
+    <Property Name="subscription_activity_type_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subscription_id" Type="Int32" Nullable="false" />
+    <Property Name="activity_type_id" Type="Int32" Nullable="false" />
+    <Property Name="activity_type_amount" Type="Int32" />
+    <NavigationProperty Name="ActivityTypes" Relationship="Self.FK__Subscript__activ__27C4AFC5" FromRole="SubscriptionActivityTypes" ToRole="ActivityTypes" />
+    <NavigationProperty Name="Subscriptions" Relationship="Self.FK__Subscript__subsc__26D08B8C" FromRole="SubscriptionActivityTypes" ToRole="Subscriptions" />
+  </EntityType>
+  <EntityType Name="Subscriptions">
+    <Key>
+      <PropertyRef Name="subscription_id" />
+    </Key>
+    <Property Name="subscription_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subscription_term_id" Type="Int32" Nullable="false" />
+    <Property Name="subscription_vissit_time_id" Type="Int32" Nullable="false" />
+    <Property Name="subscription_total_cost" Type="Decimal" Precision="10" Scale="2" />
+    <NavigationProperty Name="Purchases" Relationship="Self.FK__Purchases__subsc__15A5FF8A" FromRole="Subscriptions" ToRole="Purchases" />
+    <NavigationProperty Name="SubscriptionActivityTypes" Relationship="Self.FK__Subscript__subsc__26D08B8C" FromRole="Subscriptions" ToRole="SubscriptionActivityTypes" />
+    <NavigationProperty Name="SubscriptionTerms" Relationship="Self.FK__Subscript__subsc__0EF901FB" FromRole="Subscriptions" ToRole="SubscriptionTerms" />
+    <NavigationProperty Name="SubscriptionVisitTimes" Relationship="Self.FK__Subscript__subsc__0FED2634" FromRole="Subscriptions" ToRole="SubscriptionVisitTimes" />
+  </EntityType>
+  <EntityType Name="SubscriptionTerms">
+    <Key>
+      <PropertyRef Name="subscription_term_id" />
+    </Key>
+    <Property Name="subscription_term_id" Type="Int32" Nullable="false" />
+    <Property Name="subscription_term" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Subscriptions" Relationship="Self.FK__Subscript__subsc__0EF901FB" FromRole="SubscriptionTerms" ToRole="Subscriptions" />
+  </EntityType>
+  <EntityType Name="SubscriptionVisitTimes">
+    <Key>
+      <PropertyRef Name="subscription_visit_time_id" />
+    </Key>
+    <Property Name="subscription_visit_time_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="subscription_visit_time" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Subscriptions" Relationship="Self.FK__Subscript__subsc__0FED2634" FromRole="SubscriptionVisitTimes" ToRole="Subscriptions" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrainerActivities">
+    <Key>
+      <PropertyRef Name="trainer_activity_id" />
+    </Key>
+    <Property Name="trainer_activity_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trainer_id" Type="Int32" Nullable="false" />
+    <Property Name="activity_type_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ActivityTypes" Relationship="Self.FK__TrainerAc__activ__23F41EE1" FromRole="TrainerActivities" ToRole="ActivityTypes" />
+    <NavigationProperty Name="Trainers" Relationship="Self.FK__TrainerAc__train__22FFFAA8" FromRole="TrainerActivities" ToRole="Trainers" />
+  </EntityType>
+  <EntityType Name="Trainers">
+    <Key>
+      <PropertyRef Name="trainer_id" />
+    </Key>
+    <Property Name="trainer_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="sports_complex_id" Type="Int32" Nullable="false" />
+    <Property Name="trainer_full_name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="trainer_gender" Type="Boolean" />
+    <Property Name="trainer_phone_number" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SportComplexes" Relationship="Self.FK__Trainers__sports__047B7388" FromRole="Trainers" ToRole="SportComplexes" />
+    <NavigationProperty Name="TrainerActivities" Relationship="Self.FK__TrainerAc__train__22FFFAA8" FromRole="Trainers" ToRole="TrainerActivities" />
+    <NavigationProperty Name="Trainings" Relationship="Self.FK__Trainings__train__1F2F69C4" FromRole="Trainers" ToRole="Trainings" />
+  </EntityType>
+  <EntityType Name="Trainings">
+    <Key>
+      <PropertyRef Name="training_id" />
+    </Key>
+    <Property Name="training_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="training_start_date_time" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="training_end_date_time" Type="DateTime" Precision="3" />
+    <Property Name="trainer_id" Type="Int32" Nullable="false" />
+    <Property Name="gym_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Gyms" Relationship="Self.FK__Trainings__gym_i__20238DFD" FromRole="Trainings" ToRole="Gyms" />
+    <NavigationProperty Name="Trainers" Relationship="Self.FK__Trainings__train__1F2F69C4" FromRole="Trainings" ToRole="Trainers" />
+  </EntityType>
+  <Association Name="FK__Subscript__activ__27C4AFC5">
+    <End Role="ActivityTypes" Type="Self.ActivityTypes" Multiplicity="1" />
+    <End Role="SubscriptionActivityTypes" Type="Self.SubscriptionActivityTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityTypes">
+        <PropertyRef Name="activity_type_id" />
+      </Principal>
+      <Dependent Role="SubscriptionActivityTypes">
+        <PropertyRef Name="activity_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TrainerAc__activ__23F41EE1">
+    <End Role="ActivityTypes" Type="Self.ActivityTypes" Multiplicity="1" />
+    <End Role="TrainerActivities" Type="Self.TrainerActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ActivityTypes">
+        <PropertyRef Name="activity_type_id" />
+      </Principal>
+      <Dependent Role="TrainerActivities">
+        <PropertyRef Name="activity_type_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SportComp__compl__7AF2094E">
+    <End Role="Cities" Type="Self.Cities" Multiplicity="1" />
+    <End Role="SportComplexes" Type="Self.SportComplexes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cities">
+        <PropertyRef Name="city_id" />
+      </Principal>
+      <Dependent Role="SportComplexes">
+        <PropertyRef Name="complex_city_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Purchases__clien__14B1DB51">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="client_id" />
+      </Principal>
+      <Dependent Role="Purchases">
+        <PropertyRef Name="client_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Gyms__sports_com__7FB6BE6B">
+    <End Role="SportComplexes" Type="Self.SportComplexes" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Gyms" Type="Self.Gyms" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportComplexes">
+        <PropertyRef Name="sports_complex_id" />
+      </Principal>
+      <Dependent Role="Gyms">
+        <PropertyRef Name="sports_complex_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trainings__gym_i__20238DFD">
+    <End Role="Gyms" Type="Self.Gyms" Multiplicity="1" />
+    <End Role="Trainings" Type="Self.Trainings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gyms">
+        <PropertyRef Name="gym_id" />
+      </Principal>
+      <Dependent Role="Trainings">
+        <PropertyRef Name="gym_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Purchases__payme__169A23C3">
+    <End Role="PaymentMethods" Type="Self.PaymentMethods" Multiplicity="1" />
+    <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PaymentMethods">
+        <PropertyRef Name="payment_method_id" />
+      </Principal>
+      <Dependent Role="Purchases">
+        <PropertyRef Name="payment_method_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Purchases__subsc__15A5FF8A">
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="1" />
+    <End Role="Purchases" Type="Self.Purchases" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscriptions">
+        <PropertyRef Name="subscription_id" />
+      </Principal>
+      <Dependent Role="Purchases">
+        <PropertyRef Name="subscription_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trainers__sports__047B7388">
+    <End Role="SportComplexes" Type="Self.SportComplexes" Multiplicity="1" />
+    <End Role="Trainers" Type="Self.Trainers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SportComplexes">
+        <PropertyRef Name="sports_complex_id" />
+      </Principal>
+      <Dependent Role="Trainers">
+        <PropertyRef Name="sports_complex_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subscript__subsc__26D08B8C">
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="1" />
+    <End Role="SubscriptionActivityTypes" Type="Self.SubscriptionActivityTypes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Subscriptions">
+        <PropertyRef Name="subscription_id" />
+      </Principal>
+      <Dependent Role="SubscriptionActivityTypes">
+        <PropertyRef Name="subscription_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subscript__subsc__0EF901FB">
+    <End Role="SubscriptionTerms" Type="Self.SubscriptionTerms" Multiplicity="1" />
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscriptionTerms">
+        <PropertyRef Name="subscription_term_id" />
+      </Principal>
+      <Dependent Role="Subscriptions">
+        <PropertyRef Name="subscription_term_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Subscript__subsc__0FED2634">
+    <End Role="SubscriptionVisitTimes" Type="Self.SubscriptionVisitTimes" Multiplicity="1" />
+    <End Role="Subscriptions" Type="Self.Subscriptions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SubscriptionVisitTimes">
+        <PropertyRef Name="subscription_visit_time_id" />
+      </Principal>
+      <Dependent Role="Subscriptions">
+        <PropertyRef Name="subscription_vissit_time_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TrainerAc__train__22FFFAA8">
+    <End Role="Trainers" Type="Self.Trainers" Multiplicity="1" />
+    <End Role="TrainerActivities" Type="Self.TrainerActivities" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainers">
+        <PropertyRef Name="trainer_id" />
+      </Principal>
+      <Dependent Role="TrainerActivities">
+        <PropertyRef Name="trainer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Trainings__train__1F2F69C4">
+    <End Role="Trainers" Type="Self.Trainers" Multiplicity="1" />
+    <End Role="Trainings" Type="Self.Trainings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Trainers">
+        <PropertyRef Name="trainer_id" />
+      </Principal>
+      <Dependent Role="Trainings">
+        <PropertyRef Name="trainer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="sportComplexEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ActivityTypes" EntityType="Self.ActivityTypes" />
+    <EntitySet Name="Cities" EntityType="Self.Cities" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" />
+    <EntitySet Name="Gyms" EntityType="Self.Gyms" />
+    <EntitySet Name="PaymentMethods" EntityType="Self.PaymentMethods" />
+    <EntitySet Name="Purchases" EntityType="Self.Purchases" />
+    <EntitySet Name="SportComplexes" EntityType="Self.SportComplexes" />
+    <EntitySet Name="SubscriptionActivityTypes" EntityType="Self.SubscriptionActivityTypes" />
+    <EntitySet Name="Subscriptions" EntityType="Self.Subscriptions" />
+    <EntitySet Name="SubscriptionTerms" EntityType="Self.SubscriptionTerms" />
+    <EntitySet Name="SubscriptionVisitTimes" EntityType="Self.SubscriptionVisitTimes" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TrainerActivities" EntityType="Self.TrainerActivities" />
+    <EntitySet Name="Trainers" EntityType="Self.Trainers" />
+    <EntitySet Name="Trainings" EntityType="Self.Trainings" />
+    <AssociationSet Name="FK__Subscript__activ__27C4AFC5" Association="Self.FK__Subscript__activ__27C4AFC5">
+      <End Role="ActivityTypes" EntitySet="ActivityTypes" />
+      <End Role="SubscriptionActivityTypes" EntitySet="SubscriptionActivityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TrainerAc__activ__23F41EE1" Association="Self.FK__TrainerAc__activ__23F41EE1">
+      <End Role="ActivityTypes" EntitySet="ActivityTypes" />
+      <End Role="TrainerActivities" EntitySet="TrainerActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SportComp__compl__7AF2094E" Association="Self.FK__SportComp__compl__7AF2094E">
+      <End Role="Cities" EntitySet="Cities" />
+      <End Role="SportComplexes" EntitySet="SportComplexes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Purchases__clien__14B1DB51" Association="Self.FK__Purchases__clien__14B1DB51">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Purchases" EntitySet="Purchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Gyms__sports_com__7FB6BE6B" Association="Self.FK__Gyms__sports_com__7FB6BE6B">
+      <End Role="SportComplexes" EntitySet="SportComplexes" />
+      <End Role="Gyms" EntitySet="Gyms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trainings__gym_i__20238DFD" Association="Self.FK__Trainings__gym_i__20238DFD">
+      <End Role="Gyms" EntitySet="Gyms" />
+      <End Role="Trainings" EntitySet="Trainings" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Purchases__payme__169A23C3" Association="Self.FK__Purchases__payme__169A23C3">
+      <End Role="PaymentMethods" EntitySet="PaymentMethods" />
+      <End Role="Purchases" EntitySet="Purchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Purchases__subsc__15A5FF8A" Association="Self.FK__Purchases__subsc__15A5FF8A">
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+      <End Role="Purchases" EntitySet="Purchases" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trainers__sports__047B7388" Association="Self.FK__Trainers__sports__047B7388">
+      <End Role="SportComplexes" EntitySet="SportComplexes" />
+      <End Role="Trainers" EntitySet="Trainers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subscript__subsc__26D08B8C" Association="Self.FK__Subscript__subsc__26D08B8C">
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+      <End Role="SubscriptionActivityTypes" EntitySet="SubscriptionActivityTypes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subscript__subsc__0EF901FB" Association="Self.FK__Subscript__subsc__0EF901FB">
+      <End Role="SubscriptionTerms" EntitySet="SubscriptionTerms" />
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Subscript__subsc__0FED2634" Association="Self.FK__Subscript__subsc__0FED2634">
+      <End Role="SubscriptionVisitTimes" EntitySet="SubscriptionVisitTimes" />
+      <End Role="Subscriptions" EntitySet="Subscriptions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TrainerAc__train__22FFFAA8" Association="Self.FK__TrainerAc__train__22FFFAA8">
+      <End Role="Trainers" EntitySet="Trainers" />
+      <End Role="TrainerActivities" EntitySet="TrainerActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Trainings__train__1F2F69C4" Association="Self.FK__Trainings__train__1F2F69C4">
+      <End Role="Trainers" EntitySet="Trainers" />
+      <End Role="Trainings" EntitySet="Trainings" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

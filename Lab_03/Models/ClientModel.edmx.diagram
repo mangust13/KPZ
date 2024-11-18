@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c1b4dc532c124d5998a0f6b4ac96a337" Name="Diagram1">
+        <EntityTypeShape EntityType="sportComplexModel.ActivityTypes" Width="1.5" PointX="6" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Cities" Width="1.5" PointX="8.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Clients" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Gyms" Width="1.5" PointX="13.25" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.PaymentMethods" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Purchases" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.SportComplexes" Width="1.5" PointX="11" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.SubscriptionActivityTypes" Width="1.5" PointX="8.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Subscriptions" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.SubscriptionTerms" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.SubscriptionVisitTimes" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.TrainerActivities" Width="1.5" PointX="15.5" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Trainers" Width="1.5" PointX="13.25" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="sportComplexModel.Trainings" Width="1.5" PointX="15.5" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="sportComplexModel.FK__Subscript__activ__27C4AFC5" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__TrainerAc__activ__23F41EE1" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__SportComp__compl__7AF2094E" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Purchases__clien__14B1DB51" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Gyms__sports_com__7FB6BE6B" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Trainings__gym_i__20238DFD" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Purchases__payme__169A23C3" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Purchases__subsc__15A5FF8A" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Trainers__sports__047B7388" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Subscript__subsc__26D08B8C" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Subscript__subsc__0EF901FB" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Subscript__subsc__0FED2634" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__TrainerAc__train__22FFFAA8" ManuallyRouted="false" />
+        <AssociationConnector Association="sportComplexModel.FK__Trainings__train__1F2F69C4" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
