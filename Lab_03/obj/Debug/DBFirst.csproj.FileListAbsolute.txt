@@ -1,0 +1,14 @@
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\Lab_03.exe.config
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\Lab_03.exe
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\Lab_03.pdb
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\EntityFramework.dll
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\EntityFramework.SqlServer.dll
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\System.Data.SqlClient.dll
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\EntityFramework.xml
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\EntityFramework.SqlServer.xml
+D:\Univer\Sem_05\KPZ\Lab_03\bin\Debug\System.Data.SqlClient.xml
+D:\Univer\Sem_05\KPZ\Lab_03\obj\Debug\DBFirst.csproj.AssemblyReference.cache
+D:\Univer\Sem_05\KPZ\Lab_03\obj\Debug\DBFirst.csproj.CoreCompileInputs.cache
+D:\Univer\Sem_05\KPZ\Lab_03\obj\Debug\DBFirst.csproj.Up2Date
+D:\Univer\Sem_05\KPZ\Lab_03\obj\Debug\Lab_03.exe
+D:\Univer\Sem_05\KPZ\Lab_03\obj\Debug\Lab_03.pdb

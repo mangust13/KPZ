@@ -1,0 +1,12 @@
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\DBFirst.exe.config
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\DBFirst.exe
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\DBFirst.pdb
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\EntityFramework.dll
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\EntityFramework.SqlServer.dll
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\EntityFramework.xml
+D:\Univer\Sem_05\KPZ\DBFirst\bin\Debug\EntityFramework.SqlServer.xml
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.AssemblyReference.cache
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.CoreCompileInputs.cache
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.Up2Date
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\DBFirst.exe
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\DBFirst.pdb
