@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DBFirst.Models
+namespace CodeFirst.Models
 {
     public class SubscriptionVisitTime
     {

@@ -1,8 +1,8 @@
-﻿using Lab_03.Models;
+﻿using DBFirst.Models;
 using System;
 using System.Linq;
 
-namespace Lab_03
+namespace DBFirst
 {
     class Program
     {

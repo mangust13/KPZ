@@ -1,8 +1,6 @@
-﻿namespace Lab_03.Models
+﻿namespace CodeFirst.Models
 {
-    using System;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Client
     {

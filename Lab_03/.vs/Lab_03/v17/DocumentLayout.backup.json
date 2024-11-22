@@ -3,13 +3,35 @@
   "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BBF405E5-ECBE-4717-9173-98667B877D5F}|DBFirst.csproj|d:\\univer\\sem_05\\kpz\\lab_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BBF405E5-ECBE-4717-9173-98667B877D5F}|DBFirst.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\data\\sportcomplexcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\data\\sportcomplexdbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\gym.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\paymentmethod.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\activitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\city.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\sportcomplex.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,43 +41,134 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SportComplexDbInitializer.cs",
-              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexDbInitializer.cs",
-              "RelativeDocumentMoniker": "..\\DBFirst\\Data\\SportComplexDbInitializer.cs",
-              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexDbInitializer.cs",
-              "RelativeToolTip": "..\\DBFirst\\Data\\SportComplexDbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-18T22:48:44.776Z",
+              "WhenOpened": "2024-11-22T19:44:48.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Program.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Program.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Program.cs",
+              "RelativeToolTip": "..\\DBFirst\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T19:42:01.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SportComplex.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\SportComplex.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\SportComplex.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\SportComplex.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\SportComplex.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:52:23.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Purchase.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\Purchase.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Purchase.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\Purchase.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:52:21.192Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PaymentMethod.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\PaymentMethod.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\PaymentMethod.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\PaymentMethod.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\PaymentMethod.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:52:18.915Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Gym.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Gym.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\Gym.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Gym.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\Gym.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:52:15.591Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "City.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\City.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\City.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\City.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\City.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:52:08.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ActivityType.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\ActivityType.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\ActivityType.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\ActivityType.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\ActivityType.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-22T18:51:05.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SportComplexContext.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexContext.cs",
               "RelativeDocumentMoniker": "..\\DBFirst\\Data\\SportComplexContext.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexContext.cs",
               "RelativeToolTip": "..\\DBFirst\\Data\\SportComplexContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwA8AAAAvAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T18:59:20.513Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Client.cs",
               "RelativeDocumentMoniker": "..\\DBFirst\\Models\\Client.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Client.cs",
               "RelativeToolTip": "..\\DBFirst\\Models\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-18T18:43:41.737Z",
               "EditorCaption": ""

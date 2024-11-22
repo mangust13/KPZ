@@ -3,10 +3,9 @@ using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.SqlServer;
 using System.Runtime.Remoting.Contexts;
-using DBFirst.Models;
-using Lab_03.Models;
+using CodeFirst.Models;
 
-namespace Lab_03.Data
+namespace CodeFirst.Data
 {
     public class SportComplexContext : DbContext
     {

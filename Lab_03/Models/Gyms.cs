@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Lab_03.Models
+namespace DBFirst.Models
 {
     using System;
     using System.Collections.Generic;

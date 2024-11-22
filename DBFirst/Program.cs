@@ -1,18 +1,16 @@
-﻿using Lab_03.Data;
-using Lab_03.Models;
+﻿using CodeFirst.Data;
+using CodeFirst.Models;
 using System;
 using System.Linq;
 
-namespace Lab_03
+namespace CodeFirst
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Використовуємо контекст з папки Data
             using (var context = new SportComplexContext())
             {
-                // Логіка меню
                 while (true)
                 {
                     Console.WriteLine("\nChoose an operation:");
@@ -52,20 +50,16 @@ namespace Lab_03
 
         static void AddClient(SportComplexContext context)
         {
-            // Зчитуємо ім'я клієнта
             Console.Write("Enter the full name of the client: ");
             var fullName = Console.ReadLine();
 
-            // Зчитуємо стать клієнта
             Console.Write("Enter the gender of the client (1 for male, 0 for female, leave empty if not specified): ");
             var genderInput = Console.ReadLine();
             bool? gender = string.IsNullOrEmpty(genderInput) ? (bool?)null : genderInput == "1";
 
-            // Зчитуємо телефонний номер клієнта
             Console.Write("Enter the phone number of the client: ");
             var phoneNumber = Console.ReadLine();
 
-            // Створюємо новий об'єкт клієнта
             var newClient = new Client
             {
                 client_full_name = fullName,
@@ -73,10 +67,8 @@ namespace Lab_03
                 client_phone_number = phoneNumber
             };
 
-            // Додаємо нового клієнта в базу даних
             context.Clients.Add(newClient);
 
-            // Зберігаємо зміни в базі даних
             context.SaveChanges();
 
             Console.WriteLine("Client successfully added.");
@@ -87,12 +79,10 @@ namespace Lab_03
             Console.Write("Enter the ID of the client to update: ");
             if (int.TryParse(Console.ReadLine(), out int clientId))
             {
-                // Знаходимо клієнта за ID
                 var client = context.Clients.FirstOrDefault(c => c.client_id == clientId);
 
                 if (client != null)
                 {
-                    // Зчитуємо нові дані для оновлення
                     Console.Write("Enter the new full name of the client (leave empty to keep current): ");
                     var newName = Console.ReadLine();
                     if (!string.IsNullOrEmpty(newName))
@@ -108,7 +98,6 @@ namespace Lab_03
                     if (!string.IsNullOrEmpty(newPhoneNumber))
                         client.client_phone_number = newPhoneNumber;
 
-                    // Зберігаємо зміни
                     context.SaveChanges();
                     Console.WriteLine("Client data successfully updated.");
                 }
@@ -128,12 +117,10 @@ namespace Lab_03
             Console.Write("Enter the ID of the client to delete: ");
             if (int.TryParse(Console.ReadLine(), out int clientId))
             {
-                // Знаходимо клієнта за ID
                 var client = context.Clients.FirstOrDefault(c => c.client_id == clientId);
 
                 if (client != null)
                 {
-                    // Видаляємо клієнта
                     context.Clients.Remove(client);
                     context.SaveChanges();
                     Console.WriteLine("Client successfully deleted.");
@@ -152,7 +139,6 @@ namespace Lab_03
 
         static void ShowAllClients(SportComplexContext context)
         {
-            // Отримуємо список всіх клієнтів
             var clients = context.Clients.ToList();
 
             if (clients.Any())
