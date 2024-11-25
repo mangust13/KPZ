@@ -10,3 +10,6 @@ D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.CoreCompileInputs.cache
 D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.Up2Date
 D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\DBFirst.exe
 D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\DBFirst.pdb
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.Migrations.InitialCreate.resources
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.csproj.GenerateResource.cache
+D:\Univer\Sem_05\KPZ\DBFirst\obj\Debug\CodeFirst.Migrations.AddEmailToClient.resources

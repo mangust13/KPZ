@@ -3,14 +3,16 @@
   "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\activitytype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BBF405E5-ECBE-4717-9173-98667B877D5F}|DBFirst.csproj|d:\\univer\\sem_05\\kpz\\lab_03\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BBF405E5-ECBE-4717-9173-98667B877D5F}|DBFirst.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\data\\sportcomplexcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{611E062D-5ABB-43A0-9F3C-E94CCBAA39B5}|..\\DBFirst\\CodeFirst.csproj|d:\\univer\\sem_05\\kpz\\dbfirst\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -25,27 +27,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "App.config",
-              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\App.config",
-              "RelativeDocumentMoniker": "..\\DBFirst\\App.config",
-              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\App.config",
-              "RelativeToolTip": "..\\DBFirst\\App.config",
+              "Title": "ActivityType.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\ActivityType.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\ActivityType.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\ActivityType.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\ActivityType.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-11-22T19:45:57.401Z",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T19:23:18.6Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\Lab_03\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAARAAAAAAAAAA==",
+              "Title": "SportComplexContext.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexContext.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Data\\SportComplexContext.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Data\\SportComplexContext.cs",
+              "RelativeToolTip": "..\\DBFirst\\Data\\SportComplexContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAABWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T19:44:48.083Z",
+              "WhenOpened": "2024-11-25T19:21:11.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Client.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "..\\DBFirst\\Models\\Client.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Models\\Client.cs",
+              "RelativeToolTip": "..\\DBFirst\\Models\\Client.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-23T10:56:43.918Z",
               "EditorCaption": ""
             },
             {
@@ -56,7 +71,7 @@
               "RelativeDocumentMoniker": "..\\DBFirst\\Program.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\DBFirst\\Program.cs",
               "RelativeToolTip": "..\\DBFirst\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-22T19:42:01.581Z",
               "EditorCaption": ""

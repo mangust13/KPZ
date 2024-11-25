@@ -54,6 +54,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\SportComplexContext.cs" />
+    <Compile Include="Migrations\202411231058472_InitialCreate.cs" />
+    <Compile Include="Migrations\202411231058472_InitialCreate.Designer.cs">
+      <DependentUpon>202411231058472_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202411231101066_AddEmailToClient.cs" />
+    <Compile Include="Migrations\202411231101066_AddEmailToClient.Designer.cs">
+      <DependentUpon>202411231101066_AddEmailToClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ActivityType.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Client.cs" />
@@ -75,7 +84,14 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202411231058472_InitialCreate.resx">
+      <DependentUpon>202411231058472_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202411231101066_AddEmailToClient.resx">
+      <DependentUpon>202411231101066_AddEmailToClient.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
