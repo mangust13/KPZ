@@ -23,7 +23,9 @@ namespace TodoApi.Controllers
         /// Отримати список усіх клієнтів.
         /// </summary>
         /// <returns>Список клієнтів</returns>
+        /// <response code="200">Успішно отримано список клієнтів</response>
         [HttpGet]
+        [ProducesResponseType(StatusCodes.Status200OK)]
         public async Task<ActionResult<IEnumerable<ClientViewModel>>> GetClients()
         {
             var clients = await _context.Clients.ToListAsync();
@@ -36,7 +38,11 @@ namespace TodoApi.Controllers
         /// </summary>
         /// <param name="id">Ідентифікатор клієнта</param>
         /// <returns>Клієнт</returns>
+        /// <response code="200">Клієнт знайдений</response>
+        /// <response code="404">Клієнт не знайдений</response>
         [HttpGet("{id}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ClientViewModel>> GetClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);
@@ -54,9 +60,19 @@ namespace TodoApi.Controllers
         /// </summary>
         /// <param name="clientViewModel">Дані нового клієнта</param>
         /// <returns>Доданий клієнт</returns>
+        /// <response code="201">Клієнт успішно створений</response>
+        /// <response code="400">Некоректний ввід</response>
         [HttpPost]
+        [ProducesResponseType(StatusCodes.Status201Created)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<ActionResult<ClientViewModel>> PostClient(ClientViewModel clientViewModel)
         {
+            // Перевірка валідності моделі
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var client = _mapper.Map<Client>(clientViewModel);
             _context.Clients.Add(client);
             await _context.SaveChangesAsync();
@@ -71,7 +87,13 @@ namespace TodoApi.Controllers
         /// <param name="id">Ідентифікатор клієнта</param>
         /// <param name="clientViewModel">Дані для оновлення</param>
         /// <returns>Результат</returns>
+        /// <response code="204">Успішно оновлено</response>
+        /// <response code="400">Некоректний ввід</response>
+        /// <response code="404">Клієнт не знайдений</response>
         [HttpPut("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> PutClient(int id, ClientViewModel clientViewModel)
         {
             if (id != clientViewModel.Id)
@@ -80,7 +102,8 @@ namespace TodoApi.Controllers
             }
 
             var client = _mapper.Map<Client>(clientViewModel);
-            client.client_id = id; // Установлюємо ідентифікатор
+            client.client_id = id; // Установлюємо ID
+
             _context.Entry(client).State = EntityState.Modified;
 
             try
@@ -106,8 +129,12 @@ namespace TodoApi.Controllers
         /// Видалити клієнта за ідентифікатором.
         /// </summary>
         /// <param name="id">Ідентифікатор клієнта</param>
-        /// <returns>Нічого</returns>
+        /// <returns>Результат</returns>
+        /// <response code="204">Клієнт успішно видалений</response>
+        /// <response code="404">Клієнт не знайдений</response>
         [HttpDelete("{id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        [ProducesResponseType(StatusCodes.Status404NotFound)]
         public async Task<IActionResult> DeleteClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);

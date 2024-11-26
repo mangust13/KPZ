@@ -18,7 +18,7 @@
         "summary": "Отримати список усіх клієнтів.",
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Успішно отримано список клієнтів",
             "content": {
               "text/plain": {
                 "schema": {
@@ -74,8 +74,8 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK",
+          "201": {
+            "description": "Клієнт успішно створений",
             "content": {
               "text/plain": {
                 "schema": {
@@ -90,6 +90,26 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ClientViewModel"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Некоректний ввід",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -117,7 +137,7 @@
         ],
         "responses": {
           "200": {
-            "description": "OK",
+            "description": "Клієнт знайдений",
             "content": {
               "text/plain": {
                 "schema": {
@@ -132,6 +152,26 @@
               "text/json": {
                 "schema": {
                   "$ref": "#/components/schemas/ClientViewModel"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Клієнт не знайдений",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
                 }
               }
             }
@@ -176,8 +216,48 @@
           }
         },
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "Успішно оновлено"
+          },
+          "400": {
+            "description": "Некоректний ввід",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Клієнт не знайдений",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       },
@@ -199,8 +279,28 @@
           }
         ],
         "responses": {
-          "200": {
-            "description": "OK"
+          "204": {
+            "description": "Клієнт успішно видалений"
+          },
+          "404": {
+            "description": "Клієнт не знайдений",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ProblemDetails"
+                }
+              }
+            }
           }
         }
       }
@@ -2691,6 +2791,10 @@
         "additionalProperties": false
       },
       "ClientViewModel": {
+        "required": [
+          "fullName",
+          "gender"
+        ],
         "type": "object",
         "properties": {
           "id": {
@@ -2698,16 +2802,19 @@
             "format": "int32"
           },
           "fullName": {
-            "type": "string",
-            "nullable": true
+            "maxLength": 255,
+            "minLength": 1,
+            "type": "string"
           },
           "phoneNumber": {
             "type": "string",
+            "format": "tel",
             "nullable": true
           },
           "gender": {
-            "type": "string",
-            "nullable": true
+            "minLength": 1,
+            "pattern": "^(Чоловік|Жінка)$",
+            "type": "string"
           }
         },
         "additionalProperties": false
@@ -2758,6 +2865,33 @@
           }
         },
         "additionalProperties": false
+      },
+      "ProblemDetails": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "nullable": true
+          },
+          "title": {
+            "type": "string",
+            "nullable": true
+          },
+          "status": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "detail": {
+            "type": "string",
+            "nullable": true
+          },
+          "instance": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": { }
       },
       "Purchase": {
         "type": "object",

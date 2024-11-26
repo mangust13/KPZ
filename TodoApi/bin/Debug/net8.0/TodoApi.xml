@@ -9,6 +9,7 @@
             Отримати список усіх клієнтів.
             </summary>
             <returns>Список клієнтів</returns>
+            <response code="200">Успішно отримано список клієнтів</response>
         </member>
         <member name="M:TodoApi.Controllers.ClientsController.GetClient(System.Int32)">
             <summary>
@@ -16,6 +17,8 @@
             </summary>
             <param name="id">Ідентифікатор клієнта</param>
             <returns>Клієнт</returns>
+            <response code="200">Клієнт знайдений</response>
+            <response code="404">Клієнт не знайдений</response>
         </member>
         <member name="M:TodoApi.Controllers.ClientsController.PostClient(TodoApi.ViewModels.ClientViewModel)">
             <summary>
@@ -23,6 +26,8 @@
             </summary>
             <param name="clientViewModel">Дані нового клієнта</param>
             <returns>Доданий клієнт</returns>
+            <response code="201">Клієнт успішно створений</response>
+            <response code="400">Некоректний ввід</response>
         </member>
         <member name="M:TodoApi.Controllers.ClientsController.PutClient(System.Int32,TodoApi.ViewModels.ClientViewModel)">
             <summary>
@@ -31,13 +36,18 @@
             <param name="id">Ідентифікатор клієнта</param>
             <param name="clientViewModel">Дані для оновлення</param>
             <returns>Результат</returns>
+            <response code="204">Успішно оновлено</response>
+            <response code="400">Некоректний ввід</response>
+            <response code="404">Клієнт не знайдений</response>
         </member>
         <member name="M:TodoApi.Controllers.ClientsController.DeleteClient(System.Int32)">
             <summary>
             Видалити клієнта за ідентифікатором.
             </summary>
             <param name="id">Ідентифікатор клієнта</param>
-            <returns>Нічого</returns>
+            <returns>Результат</returns>
+            <response code="204">Клієнт успішно видалений</response>
+            <response code="404">Клієнт не знайдений</response>
         </member>
     </members>
 </doc>

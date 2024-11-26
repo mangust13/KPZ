@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:58:31.361Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\MappingProfile.cs",
               "RelativeDocumentMoniker": "MappingProfile.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\MappingProfile.cs",
               "RelativeToolTip": "MappingProfile.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:58:10.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "ClientViewModel.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\ViewModels\\ClientViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\ClientViewModel.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\ViewModels\\ClientViewModel.cs",
               "RelativeToolTip": "ViewModels\\ClientViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAkwAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:57:21.375Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Models\\Client.cs",
               "RelativeDocumentMoniker": "Models\\Client.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Models\\Client.cs",
               "RelativeToolTip": "Models\\Client.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAkwBUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:53:24.029Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ClientsController.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\ClientsController.cs",
               "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\ClientsController.cs",
               "RelativeToolTip": "Controllers\\ClientsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-25T23:12:13.436Z",
               "EditorCaption": ""
