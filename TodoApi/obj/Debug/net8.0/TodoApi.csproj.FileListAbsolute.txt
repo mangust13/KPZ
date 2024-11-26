@@ -171,3 +171,6 @@ D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Run
 D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
 D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\TodoApi.xml
+D:\Univer\Sem_05\KPZ\TodoApi\obj\Debug\net8.0\TodoApi.xml
+D:\Univer\Sem_05\KPZ\TodoApi\bin\Debug\net8.0\AutoMapper.dll

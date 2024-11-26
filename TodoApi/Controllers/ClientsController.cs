@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using TodoApi.Models; // Підключіть ваші моделі
-using TodoApi; // Підключіть ваш DbContext
+using TodoApi.Models;
+using TodoApi.ViewModels;
 
 namespace TodoApi.Controllers
 {
@@ -10,42 +11,76 @@ namespace TodoApi.Controllers
     public class ClientsController : ControllerBase
     {
         private readonly SportComplexContext _context;
+        private readonly IMapper _mapper;
 
-        public ClientsController(SportComplexContext context)
+        public ClientsController(SportComplexContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        // GET: api/Clients
+        /// <summary>
+        /// Отримати список усіх клієнтів.
+        /// </summary>
+        /// <returns>Список клієнтів</returns>
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Client>>> GetClients()
+        public async Task<ActionResult<IEnumerable<ClientViewModel>>> GetClients()
         {
-            return await _context.Clients.ToListAsync();
+            var clients = await _context.Clients.ToListAsync();
+            var clientViewModels = _mapper.Map<IEnumerable<ClientViewModel>>(clients);
+            return Ok(clientViewModels);
         }
 
-        // GET: api/Clients/5
+        /// <summary>
+        /// Отримати клієнта за ідентифікатором.
+        /// </summary>
+        /// <param name="id">Ідентифікатор клієнта</param>
+        /// <returns>Клієнт</returns>
         [HttpGet("{id}")]
-        public async Task<ActionResult<Client>> GetClient(int id)
+        public async Task<ActionResult<ClientViewModel>> GetClient(int id)
         {
             var client = await _context.Clients.FindAsync(id);
-
             if (client == null)
             {
                 return NotFound();
             }
 
-            return client;
+            var clientViewModel = _mapper.Map<ClientViewModel>(client);
+            return Ok(clientViewModel);
         }
 
-        // PUT: api/Clients/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutClient(int id, Client client)
+        /// <summary>
+        /// Додати нового клієнта.
+        /// </summary>
+        /// <param name="clientViewModel">Дані нового клієнта</param>
+        /// <returns>Доданий клієнт</returns>
+        [HttpPost]
+        public async Task<ActionResult<ClientViewModel>> PostClient(ClientViewModel clientViewModel)
         {
-            if (id != client.client_id)
+            var client = _mapper.Map<Client>(clientViewModel);
+            _context.Clients.Add(client);
+            await _context.SaveChangesAsync();
+
+            var createdClientViewModel = _mapper.Map<ClientViewModel>(client);
+            return CreatedAtAction("GetClient", new { id = client.client_id }, createdClientViewModel);
+        }
+
+        /// <summary>
+        /// Оновити дані клієнта.
+        /// </summary>
+        /// <param name="id">Ідентифікатор клієнта</param>
+        /// <param name="clientViewModel">Дані для оновлення</param>
+        /// <returns>Результат</returns>
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutClient(int id, ClientViewModel clientViewModel)
+        {
+            if (id != clientViewModel.Id)
             {
                 return BadRequest();
             }
 
+            var client = _mapper.Map<Client>(clientViewModel);
+            client.client_id = id; // Установлюємо ідентифікатор
             _context.Entry(client).State = EntityState.Modified;
 
             try
@@ -54,7 +89,7 @@ namespace TodoApi.Controllers
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!ClientExists(id))
+                if (!_context.Clients.Any(c => c.client_id == id))
                 {
                     return NotFound();
                 }
@@ -67,17 +102,11 @@ namespace TodoApi.Controllers
             return NoContent();
         }
 
-        // POST: api/Clients
-        [HttpPost]
-        public async Task<ActionResult<Client>> PostClient(Client client)
-        {
-            _context.Clients.Add(client);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetClient", new { id = client.client_id }, client);
-        }
-
-        // DELETE: api/Clients/5
+        /// <summary>
+        /// Видалити клієнта за ідентифікатором.
+        /// </summary>
+        /// <param name="id">Ідентифікатор клієнта</param>
+        /// <returns>Нічого</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteClient(int id)
         {
@@ -91,11 +120,6 @@ namespace TodoApi.Controllers
             await _context.SaveChangesAsync();
 
             return NoContent();
-        }
-
-        private bool ClientExists(int id)
-        {
-            return _context.Clients.Any(e => e.client_id == id);
         }
     }
 }

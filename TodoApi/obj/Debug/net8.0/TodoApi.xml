@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TodoApi</name>
+    </assembly>
+    <members>
+        <member name="M:TodoApi.Controllers.ClientsController.GetClients">
+            <summary>
+            Отримати список усіх клієнтів.
+            </summary>
+            <returns>Список клієнтів</returns>
+        </member>
+        <member name="M:TodoApi.Controllers.ClientsController.GetClient(System.Int32)">
+            <summary>
+            Отримати клієнта за ідентифікатором.
+            </summary>
+            <param name="id">Ідентифікатор клієнта</param>
+            <returns>Клієнт</returns>
+        </member>
+        <member name="M:TodoApi.Controllers.ClientsController.PostClient(TodoApi.ViewModels.ClientViewModel)">
+            <summary>
+            Додати нового клієнта.
+            </summary>
+            <param name="clientViewModel">Дані нового клієнта</param>
+            <returns>Доданий клієнт</returns>
+        </member>
+        <member name="M:TodoApi.Controllers.ClientsController.PutClient(System.Int32,TodoApi.ViewModels.ClientViewModel)">
+            <summary>
+            Оновити дані клієнта.
+            </summary>
+            <param name="id">Ідентифікатор клієнта</param>
+            <param name="clientViewModel">Дані для оновлення</param>
+            <returns>Результат</returns>
+        </member>
+        <member name="M:TodoApi.Controllers.ClientsController.DeleteClient(System.Int32)">
+            <summary>
+            Видалити клієнта за ідентифікатором.
+            </summary>
+            <param name="id">Ідентифікатор клієнта</param>
+            <returns>Нічого</returns>
+        </member>
+    </members>
+</doc>
