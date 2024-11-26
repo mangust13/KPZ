@@ -9,6 +9,9 @@
       "TodoApi/1.0.0": {
         "dependencies": {
           "AutoMapper": "13.0.1",
+          "Lab4.Abstraction": "1.0.0",
+          "Lab4.BLL": "1.0.0",
+          "Lab4.DAL": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "9.0.0",
@@ -1097,6 +1100,39 @@
             "fileVersion": "6.0.21.52210"
           }
         }
+      },
+      "Lab4.Abstraction/1.0.0": {
+        "runtime": {
+          "Lab4.Abstraction.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Lab4.BLL/1.0.0": {
+        "dependencies": {
+          "Lab4.Abstraction": "1.0.0",
+          "Lab4.DAL": "1.0.0"
+        },
+        "runtime": {
+          "Lab4.BLL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Lab4.DAL/1.0.0": {
+        "dependencies": {
+          "Lab4.Abstraction": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
+        },
+        "runtime": {
+          "Lab4.DAL.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
       }
     }
   },
@@ -1707,6 +1743,21 @@
       "sha512": "sha512-IXoJOXIqc39AIe+CIR7koBtRGMiCt/LPM3lI+PELtDIy9XdyeSrwXFdWV9dzJ2Awl0paLWUaknLxFQ5HpHZUog==",
       "path": "system.windows.extensions/6.0.0",
       "hashPath": "system.windows.extensions.6.0.0.nupkg.sha512"
+    },
+    "Lab4.Abstraction/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lab4.BLL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lab4.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

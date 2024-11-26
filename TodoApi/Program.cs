@@ -1,7 +1,11 @@
-using AutoMapper; // Для AutoMapper
+using AutoMapper;
+using Lab4.Abstraction.IRepository;
+using Lab4.Abstraction.IServices;
+using Lab4.BLL.Services;
+using Lab4.DAL.Data;
+using Lab4.DAL.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using TodoApi; // Ваш проект
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -33,16 +37,18 @@ builder.Services.AddSwaggerGen(c =>
         }
     });
 
-    var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
-    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-    c.IncludeXmlComments(xmlPath);
+    //var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    //c.IncludeXmlComments(xmlPath);
 
-    c.DocumentFilter<SwaggerControllerSorter>();
+    //c.DocumentFilter<SwaggerControllerSorter>();
 });
 
 // Реєстрація DbContext
 builder.Services.AddDbContext<SportComplexContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IClientService, ClientService>();
 
 var app = builder.Build();
 
@@ -53,9 +59,6 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();

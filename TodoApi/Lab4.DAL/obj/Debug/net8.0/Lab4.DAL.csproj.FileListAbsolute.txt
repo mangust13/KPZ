@@ -1,0 +1,14 @@
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\bin\Debug\net8.0\Lab4.DAL.deps.json
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\bin\Debug\net8.0\Lab4.DAL.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\bin\Debug\net8.0\Lab4.DAL.pdb
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\bin\Debug\net8.0\Lab4.Abstraction.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\bin\Debug\net8.0\Lab4.Abstraction.pdb
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.csproj.AssemblyReference.cache
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.csproj.CoreCompileInputs.cache
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.sourcelink.json
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.csproj.Up2Date
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\refint\Lab4.DAL.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\Lab4.DAL.pdb
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.DAL\obj\Debug\net8.0\ref\Lab4.DAL.dll

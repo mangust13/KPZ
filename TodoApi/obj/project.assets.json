@@ -1714,6 +1714,45 @@
             "rid": "win"
           }
         }
+      },
+      "Lab4.Abstraction/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/Lab4.Abstraction.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lab4.Abstraction.dll": {}
+        }
+      },
+      "Lab4.BLL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Lab4.Abstraction": "1.0.0",
+          "Lab4.DAL": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Lab4.BLL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lab4.BLL.dll": {}
+        }
+      },
+      "Lab4.DAL/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Lab4.Abstraction": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "9.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "9.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Lab4.DAL.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Lab4.DAL.dll": {}
+        }
       }
     }
   },
@@ -5176,11 +5215,29 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Lab4.Abstraction/1.0.0": {
+      "type": "project",
+      "path": "Lab4.Abstraction/Lab4.Abstraction.csproj",
+      "msbuildProject": "Lab4.Abstraction/Lab4.Abstraction.csproj"
+    },
+    "Lab4.BLL/1.0.0": {
+      "type": "project",
+      "path": "Lab4.BLL/Lab4.BLL.csproj",
+      "msbuildProject": "Lab4.BLL/Lab4.BLL.csproj"
+    },
+    "Lab4.DAL/1.0.0": {
+      "type": "project",
+      "path": "Lab4.DAL/Lab4.DAL.csproj",
+      "msbuildProject": "Lab4.DAL/Lab4.DAL.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
       "AutoMapper >= 13.0.1",
+      "Lab4.Abstraction >= 1.0.0",
+      "Lab4.BLL >= 1.0.0",
+      "Lab4.DAL >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 9.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 9.0.0",
@@ -5218,7 +5275,17 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\Lab4.Abstraction.csproj": {
+              "projectPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\Lab4.Abstraction.csproj"
+            },
+            "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.BLL\\Lab4.BLL.csproj": {
+              "projectPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.BLL\\Lab4.BLL.csproj"
+            },
+            "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Lab4.DAL.csproj": {
+              "projectPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Lab4.DAL.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

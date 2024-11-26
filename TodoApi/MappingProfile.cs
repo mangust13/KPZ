@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
-using TodoApi.Models;
-using TodoApi.ViewModels;
+using Lab4.DAL.Models;
+using Lab4.Abstraction.ViewModels;
 
 public class MappingProfile : Profile
 {

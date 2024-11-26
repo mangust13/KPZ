@@ -1,0 +1,10 @@
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\bin\Debug\net8.0\Lab4.Abstraction.deps.json
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\bin\Debug\net8.0\Lab4.Abstraction.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\bin\Debug\net8.0\Lab4.Abstraction.pdb
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\Lab4.Abstraction.GeneratedMSBuildEditorConfig.editorconfig
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\Lab4.Abstraction.csproj.CoreCompileInputs.cache
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\Lab4.Abstraction.sourcelink.json
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\Lab4.Abstraction.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\refint\Lab4.Abstraction.dll
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\Lab4.Abstraction.pdb
+D:\Univer\Sem_05\KPZ\TodoApi\Lab4.Abstraction\obj\Debug\net8.0\ref\Lab4.Abstraction.dll
