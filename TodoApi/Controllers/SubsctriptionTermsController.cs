@@ -1,100 +1,61 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using TodoApi.Models;
+﻿using Lab4.Abstraction.IServices;
+using Lab4.Abstraction.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
-//namespace TodoApi.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class SubscriptionTermsController : ControllerBase
-//    {
-//        private readonly SportComplexContext _context;
+namespace TodoApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SubscriptionTermsController : ControllerBase
+    {
+        private readonly ISubscriptionTermService _service;
 
-//        public SubscriptionTermsController(SportComplexContext context)
-//        {
-//            _context = context;
-//        }
+        public SubscriptionTermsController(ISubscriptionTermService service)
+        {
+            _service = service;
+        }
 
-//        // GET: api/SubscriptionTerms
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<SubscriptionTerm>>> GetSubscriptionTerms()
-//        {
-//            return await _context.SubscriptionTerms.ToListAsync();
-//        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<SubscriptionTermViewModel>>> GetSubscriptionTerms()
+        {
+            return Ok(await _service.GetAllSubscriptionTermsAsync());
+        }
 
-//        // GET: api/SubscriptionTerms/5
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<SubscriptionTerm>> GetSubscriptionTerm(int id)
-//        {
-//            var subscriptionTerm = await _context.SubscriptionTerms.FindAsync(id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SubscriptionTermViewModel>> GetSubscriptionTerm(int id)
+        {
+            var subscriptionTerm = await _service.GetSubscriptionTermByIdAsync(id);
+            if (subscriptionTerm == null)
+            {
+                return NotFound();
+            }
+            return Ok(subscriptionTerm);
+        }
 
-//            if (subscriptionTerm == null)
-//            {
-//                return NotFound();
-//            }
+        [HttpPost]
+        public async Task<ActionResult> PostSubscriptionTerm(SubscriptionTermViewModel subscriptionTermViewModel)
+        {
+            await _service.AddSubscriptionTermAsync(subscriptionTermViewModel);
+            return CreatedAtAction(nameof(GetSubscriptionTerm), new { id = subscriptionTermViewModel.Id }, subscriptionTermViewModel);
+        }
 
-//            return subscriptionTerm;
-//        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSubscriptionTerm(int id, SubscriptionTermViewModel subscriptionTermViewModel)
+        {
+            if (id != subscriptionTermViewModel.Id)
+            {
+                return BadRequest();
+            }
 
-//        // PUT: api/SubscriptionTerms/5
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutSubscriptionTerm(int id, SubscriptionTerm subscriptionTerm)
-//        {
-//            if (id != subscriptionTerm.subscription_term_id)
-//            {
-//                return BadRequest();
-//            }
+            await _service.UpdateSubscriptionTermAsync(subscriptionTermViewModel);
+            return NoContent();
+        }
 
-//            _context.Entry(subscriptionTerm).State = EntityState.Modified;
-
-//            try
-//            {
-//                await _context.SaveChangesAsync();
-//            }
-//            catch (DbUpdateConcurrencyException)
-//            {
-//                if (!SubscriptionTermExists(id))
-//                {
-//                    return NotFound();
-//                }
-//                else
-//                {
-//                    throw;
-//                }
-//            }
-
-//            return NoContent();
-//        }
-
-//        // POST: api/SubscriptionTerms
-//        [HttpPost]
-//        public async Task<ActionResult<SubscriptionTerm>> PostSubscriptionTerm(SubscriptionTerm subscriptionTerm)
-//        {
-//            _context.SubscriptionTerms.Add(subscriptionTerm);
-//            await _context.SaveChangesAsync();
-
-//            return CreatedAtAction("GetSubscriptionTerm", new { id = subscriptionTerm.subscription_term_id }, subscriptionTerm);
-//        }
-
-//        // DELETE: api/SubscriptionTerms/5
-//        [HttpDelete("{id}")]
-//        public async Task<IActionResult> DeleteSubscriptionTerm(int id)
-//        {
-//            var subscriptionTerm = await _context.SubscriptionTerms.FindAsync(id);
-//            if (subscriptionTerm == null)
-//            {
-//                return NotFound();
-//            }
-
-//            _context.SubscriptionTerms.Remove(subscriptionTerm);
-//            await _context.SaveChangesAsync();
-
-//            return NoContent();
-//        }
-
-//        private bool SubscriptionTermExists(int id)
-//        {
-//            return _context.SubscriptionTerms.Any(e => e.subscription_term_id == id);
-//        }
-//    }
-//}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSubscriptionTerm(int id)
+        {
+            await _service.DeleteSubscriptionTermAsync(id);
+            return NoContent();
+        }
+    }
+}

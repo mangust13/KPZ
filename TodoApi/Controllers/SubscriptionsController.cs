@@ -1,106 +1,61 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using TodoApi.Models;
+﻿using Lab4.Abstraction.IServices;
+using Lab4.Abstraction.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
-//namespace TodoApi.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class SubscriptionsController : ControllerBase
-//    {
-//        private readonly SportComplexContext _context;
+namespace TodoApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class SubscriptionsController : ControllerBase
+    {
+        private readonly ISubscriptionService _service;
 
-//        public SubscriptionsController(SportComplexContext context)
-//        {
-//            _context = context;
-//        }
+        public SubscriptionsController(ISubscriptionService service)
+        {
+            _service = service;
+        }
 
-//        // GET: api/Subscriptions
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<Subscription>>> GetSubscriptions()
-//        {
-//            return await _context.Subscriptions
-//                .Include(s => s.SubscriptionTerm)
-//                .Include(s => s.SubscriptionVisitTime)
-//                .ToListAsync();
-//        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<SubscriptionViewModel>>> GetSubscriptions()
+        {
+            return Ok(await _service.GetAllSubscriptionsAsync());
+        }
 
-//        // GET: api/Subscriptions/5
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<Subscription>> GetSubscription(int id)
-//        {
-//            var subscription = await _context.Subscriptions
-//                .Include(s => s.SubscriptionTerm)
-//                .Include(s => s.SubscriptionVisitTime)
-//                .FirstOrDefaultAsync(s => s.subscription_id == id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<SubscriptionViewModel>> GetSubscription(int id)
+        {
+            var subscription = await _service.GetSubscriptionByIdAsync(id);
+            if (subscription == null)
+            {
+                return NotFound();
+            }
+            return Ok(subscription);
+        }
 
-//            if (subscription == null)
-//            {
-//                return NotFound();
-//            }
+        [HttpPost]
+        public async Task<ActionResult> PostSubscription(SubscriptionViewModel subscriptionViewModel)
+        {
+            await _service.AddSubscriptionAsync(subscriptionViewModel);
+            return CreatedAtAction(nameof(GetSubscription), new { id = subscriptionViewModel.Id }, subscriptionViewModel);
+        }
 
-//            return subscription;
-//        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutSubscription(int id, SubscriptionViewModel subscriptionViewModel)
+        {
+            if (id != subscriptionViewModel.Id)
+            {
+                return BadRequest();
+            }
 
-//        // PUT: api/Subscriptions/5
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutSubscription(int id, Subscription subscription)
-//        {
-//            if (id != subscription.subscription_id)
-//            {
-//                return BadRequest();
-//            }
+            await _service.UpdateSubscriptionAsync(subscriptionViewModel);
+            return NoContent();
+        }
 
-//            _context.Entry(subscription).State = EntityState.Modified;
-
-//            try
-//            {
-//                await _context.SaveChangesAsync();
-//            }
-//            catch (DbUpdateConcurrencyException)
-//            {
-//                if (!SubscriptionExists(id))
-//                {
-//                    return NotFound();
-//                }
-//                else
-//                {
-//                    throw;
-//                }
-//            }
-
-//            return NoContent();
-//        }
-
-//        // POST: api/Subscriptions
-//        [HttpPost]
-//        public async Task<ActionResult<Subscription>> PostSubscription(Subscription subscription)
-//        {
-//            _context.Subscriptions.Add(subscription);
-//            await _context.SaveChangesAsync();
-
-//            return CreatedAtAction("GetSubscription", new { id = subscription.subscription_id }, subscription);
-//        }
-
-//        // DELETE: api/Subscriptions/5
-//        [HttpDelete("{id}")]
-//        public async Task<IActionResult> DeleteSubscription(int id)
-//        {
-//            var subscription = await _context.Subscriptions.FindAsync(id);
-//            if (subscription == null)
-//            {
-//                return NotFound();
-//            }
-
-//            _context.Subscriptions.Remove(subscription);
-//            await _context.SaveChangesAsync();
-
-//            return NoContent();
-//        }
-
-//        private bool SubscriptionExists(int id)
-//        {
-//            return _context.Subscriptions.Any(e => e.subscription_id == id);
-//        }
-//    }
-//}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteSubscription(int id)
+        {
+            await _service.DeleteSubscriptionAsync(id);
+            return NoContent();
+        }
+    }
+}

@@ -1,101 +1,61 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using Lab4.DAL.Models;
-//using Lab4.DAL.Data;
+﻿using Lab4.Abstraction.IServices;
+using Lab4.Abstraction.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
-//namespace TodoApi.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class ActivityTypesController : ControllerBase
-//    {
-//        private readonly SportComplexContext _context;
+namespace TodoApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ActivityTypesController : ControllerBase
+    {
+        private readonly IActivityTypeService _service;
 
-//        public ActivityTypesController(SportComplexContext context)
-//        {
-//            _context = context;
-//        }
+        public ActivityTypesController(IActivityTypeService service)
+        {
+            _service = service;
+        }
 
-//        // GET: api/ActivityTypes
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<ActivityType>>> GetActivityTypes()
-//        {
-//            return await _context.ActivityTypes.ToListAsync();
-//        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ActivityTypeViewModel>>> GetActivityTypes()
+        {
+            return Ok(await _service.GetAllActivityTypesAsync());
+        }
 
-//        // GET: api/ActivityTypes/5
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<ActivityType>> GetActivityType(int id)
-//        {
-//            var activityType = await _context.ActivityTypes.FindAsync(id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<ActivityTypeViewModel>> GetActivityType(int id)
+        {
+            var activityType = await _service.GetActivityTypeByIdAsync(id);
+            if (activityType == null)
+            {
+                return NotFound();
+            }
+            return Ok(activityType);
+        }
 
-//            if (activityType == null)
-//            {
-//                return NotFound();
-//            }
+        [HttpPost]
+        public async Task<ActionResult> PostActivityType(ActivityTypeViewModel activityTypeViewModel)
+        {
+            await _service.AddActivityTypeAsync(activityTypeViewModel);
+            return CreatedAtAction(nameof(GetActivityType), new { id = activityTypeViewModel.Id }, activityTypeViewModel);
+        }
 
-//            return activityType;
-//        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutActivityType(int id, ActivityTypeViewModel activityTypeViewModel)
+        {
+            if (id != activityTypeViewModel.Id)
+            {
+                return BadRequest();
+            }
 
-//        // PUT: api/ActivityTypes/5
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutActivityType(int id, ActivityType activityType)
-//        {
-//            if (id != activityType.activity_type_id)
-//            {
-//                return BadRequest();
-//            }
+            await _service.UpdateActivityTypeAsync(activityTypeViewModel);
+            return NoContent();
+        }
 
-//            _context.Entry(activityType).State = EntityState.Modified;
-
-//            try
-//            {
-//                await _context.SaveChangesAsync();
-//            }
-//            catch (DbUpdateConcurrencyException)
-//            {
-//                if (!ActivityTypeExists(id))
-//                {
-//                    return NotFound();
-//                }
-//                else
-//                {
-//                    throw;
-//                }
-//            }
-
-//            return NoContent();
-//        }
-
-//        // POST: api/ActivityTypes
-//        [HttpPost]
-//        public async Task<ActionResult<ActivityType>> PostActivityType(ActivityType activityType)
-//        {
-//            _context.ActivityTypes.Add(activityType);
-//            await _context.SaveChangesAsync();
-
-//            return CreatedAtAction("GetActivityType", new { id = activityType.activity_type_id }, activityType);
-//        }
-
-//        // DELETE: api/ActivityTypes/5
-//        [HttpDelete("{id}")]
-//        public async Task<IActionResult> DeleteActivityType(int id)
-//        {
-//            var activityType = await _context.ActivityTypes.FindAsync(id);
-//            if (activityType == null)
-//            {
-//                return NotFound();
-//            }
-
-//            _context.ActivityTypes.Remove(activityType);
-//            await _context.SaveChangesAsync();
-
-//            return NoContent();
-//        }
-
-//        private bool ActivityTypeExists(int id)
-//        {
-//            return _context.ActivityTypes.Any(e => e.activity_type_id == id);
-//        }
-//    }
-//}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteActivityType(int id)
+        {
+            await _service.DeleteActivityTypeAsync(id);
+            return NoContent();
+        }
+    }
+}

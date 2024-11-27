@@ -1,109 +1,61 @@
-﻿//using Microsoft.AspNetCore.Mvc;
-//using Microsoft.EntityFrameworkCore;
-//using Lab4.DAL.Models;
-//using Lab4.DAL.Data;
+﻿using Lab4.Abstraction.IServices;
+using Lab4.Abstraction.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 
-//namespace TodoApi.Controllers
-//{
-//    [Route("api/[controller]")]
-//    [ApiController]
-//    public class PurchasesController : ControllerBase
-//    {
-//        private readonly SportComplexContext _context;
+namespace TodoApi.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class PurchasesController : ControllerBase
+    {
+        private readonly IPurchaseService _service;
 
-//        public PurchasesController(SportComplexContext context)
-//        {
-//            _context = context;
-//        }
+        public PurchasesController(IPurchaseService service)
+        {
+            _service = service;
+        }
 
-//        // GET: api/Purchases
-//        [HttpGet]
-//        public async Task<ActionResult<IEnumerable<Purchase>>> GetPurchases()
-//        {
-//            return await _context.Purchases
-//                .Include(p => p.Client)
-//                .Include(p => p.Subscription)
-//                .Include(p => p.PaymentMethod)
-//                .ToListAsync();
-//        }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<PurchaseViewModel>>> GetPurchases()
+        {
+            return Ok(await _service.GetAllPurchasesAsync());
+        }
 
-//        // GET: api/Purchases/5
-//        [HttpGet("{id}")]
-//        public async Task<ActionResult<Purchase>> GetPurchase(int id)
-//        {
-//            var purchase = await _context.Purchases
-//                .Include(p => p.Client)
-//                .Include(p => p.Subscription)
-//                .Include(p => p.PaymentMethod)
-//                .FirstOrDefaultAsync(p => p.purchase_id == id);
+        [HttpGet("{id}")]
+        public async Task<ActionResult<PurchaseViewModel>> GetPurchase(int id)
+        {
+            var purchase = await _service.GetPurchaseByIdAsync(id);
+            if (purchase == null)
+            {
+                return NotFound();
+            }
+            return Ok(purchase);
+        }
 
-//            if (purchase == null)
-//            {
-//                return NotFound();
-//            }
+        [HttpPost]
+        public async Task<ActionResult> PostPurchase(PurchaseViewModel purchaseViewModel)
+        {
+            await _service.AddPurchaseAsync(purchaseViewModel);
+            return CreatedAtAction(nameof(GetPurchase), new { id = purchaseViewModel.Id }, purchaseViewModel);
+        }
 
-//            return purchase;
-//        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPurchase(int id, PurchaseViewModel purchaseViewModel)
+        {
+            if (id != purchaseViewModel.Id)
+            {
+                return BadRequest();
+            }
 
-//        // PUT: api/Purchases/5
-//        [HttpPut("{id}")]
-//        public async Task<IActionResult> PutPurchase(int id, Purchase purchase)
-//        {
-//            if (id != purchase.purchase_id)
-//            {
-//                return BadRequest();
-//            }
+            await _service.UpdatePurchaseAsync(purchaseViewModel);
+            return NoContent();
+        }
 
-//            _context.Entry(purchase).State = EntityState.Modified;
-
-//            try
-//            {
-//                await _context.SaveChangesAsync();
-//            }
-//            catch (DbUpdateConcurrencyException)
-//            {
-//                if (!PurchaseExists(id))
-//                {
-//                    return NotFound();
-//                }
-//                else
-//                {
-//                    throw;
-//                }
-//            }
-
-//            return NoContent();
-//        }
-
-//        // POST: api/Purchases
-//        [HttpPost]
-//        public async Task<ActionResult<Purchase>> PostPurchase(Purchase purchase)
-//        {
-//            _context.Purchases.Add(purchase);
-//            await _context.SaveChangesAsync();
-
-//            return CreatedAtAction("GetPurchase", new { id = purchase.purchase_id }, purchase);
-//        }
-
-//        // DELETE: api/Purchases/5
-//        [HttpDelete("{id}")]
-//        public async Task<IActionResult> DeletePurchase(int id)
-//        {
-//            var purchase = await _context.Purchases.FindAsync(id);
-//            if (purchase == null)
-//            {
-//                return NotFound();
-//            }
-
-//            _context.Purchases.Remove(purchase);
-//            await _context.SaveChangesAsync();
-
-//            return NoContent();
-//        }
-
-//        private bool PurchaseExists(int id)
-//        {
-//            return _context.Purchases.Any(e => e.purchase_id == id);
-//        }
-//    }
-//}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeletePurchase(int id)
+        {
+            await _service.DeletePurchaseAsync(id);
+            return NoContent();
+        }
+    }
+}

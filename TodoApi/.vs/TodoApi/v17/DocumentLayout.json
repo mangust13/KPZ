@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66BB7C64-A5A2-4847-A261-54DFC113D7B9}|Lab4.BLL\\Lab4.BLL.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.bll\\services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66BB7C64-A5A2-4847-A261-54DFC113D7B9}|Lab4.BLL\\Lab4.BLL.csproj|solutionrelative:lab4.bll\\services\\clientservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.dal\\repositories\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:lab4.dal\\repositories\\purchaserepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.abstraction\\viewmodels\\purchaseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|solutionrelative:lab4.abstraction\\viewmodels\\purchaseviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.abstraction\\viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|solutionrelative:lab4.abstraction\\viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.dal\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|solutionrelative:lab4.dal\\models\\subscription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.dal\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|solutionrelative:lab4.dal\\models\\purchase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,32 +34,85 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientService.cs",
-              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.BLL\\Services\\ClientService.cs",
-              "RelativeDocumentMoniker": "Lab4.BLL\\Services\\ClientService.cs",
-              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.BLL\\Services\\ClientService.cs",
-              "RelativeToolTip": "Lab4.BLL\\Services\\ClientService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T22:27:19.192Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACQAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAADwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T22:22:05.664Z",
+              "WhenOpened": "2024-11-27T00:39:29.193Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PurchaseViewModel.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\PurchaseViewModel.cs",
+              "RelativeDocumentMoniker": "Lab4.Abstraction\\ViewModels\\PurchaseViewModel.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\PurchaseViewModel.cs",
+              "RelativeToolTip": "Lab4.Abstraction\\ViewModels\\PurchaseViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:56:57.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClientViewModel.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "RelativeDocumentMoniker": "Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "RelativeToolTip": "Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:59:35.566Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PurchaseRepository.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Repositories\\PurchaseRepository.cs",
+              "RelativeDocumentMoniker": "Lab4.DAL\\Repositories\\PurchaseRepository.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Repositories\\PurchaseRepository.cs",
+              "RelativeToolTip": "Lab4.DAL\\Repositories\\PurchaseRepository.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAuwEkAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:57:52.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Purchase.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Models\\Purchase.cs",
+              "RelativeDocumentMoniker": "Lab4.DAL\\Models\\Purchase.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Models\\Purchase.cs",
+              "RelativeToolTip": "Lab4.DAL\\Models\\Purchase.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA/wB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T11:42:40.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Subscription.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Models\\Subscription.cs",
+              "RelativeDocumentMoniker": "Lab4.DAL\\Models\\Subscription.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Models\\Subscription.cs",
+              "RelativeToolTip": "Lab4.DAL\\Models\\Subscription.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvxgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T02:13:55.395Z",
               "EditorCaption": ""
             }
           ]
