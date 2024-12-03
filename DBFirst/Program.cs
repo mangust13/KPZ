@@ -117,6 +117,7 @@ namespace CodeFirst
             Console.Write("Enter the ID of the client to delete: ");
             if (int.TryParse(Console.ReadLine(), out int clientId))
             {
+                Console.WriteLine("Client successfully deleted.");
                 var client = context.Clients.FirstOrDefault(c => c.client_id == clientId);
 
                 if (client != null)

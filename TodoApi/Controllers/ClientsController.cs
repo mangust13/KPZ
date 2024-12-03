@@ -35,6 +35,11 @@ namespace TodoApi.Controllers
         [HttpPost]
         public async Task<ActionResult> PostClient(ClientViewModel clientViewModel)
         {
+            if (clientViewModel == null)
+            {
+                return BadRequest("Client data is required.");
+            }
+
             await _service.AddClientAsync(clientViewModel);
             return CreatedAtAction(nameof(GetClient), new { id = clientViewModel.Id }, clientViewModel);
         }
