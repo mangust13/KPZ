@@ -21,12 +21,4 @@ export class HeaderComponent {
   navigateToContracts() {
     this.router.navigate(['/contracts']);
   }
-
-  navigateToPolicies() {
-    this.router.navigate(['/policies']);
-  }
-
-  navigateToInsureObjects() {
-    this.router.navigate(['/insureobjects']);
-  }
 }

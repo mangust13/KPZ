@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\controllers\\purchasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:controllers\\purchasescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.dal\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D68F838A-3902-4A2C-A51D-52292C5FBE78}|Lab4.DAL\\Lab4.DAL.csproj|solutionrelative:lab4.dal\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|solutionrelative:controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\lab4.abstraction\\viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1ED6F4-9422-4C52-BA25-1F8D2FC436CC}|Lab4.Abstraction\\Lab4.Abstraction.csproj|solutionrelative:lab4.abstraction\\viewmodels\\clientviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{89D9B6CC-BF5A-4F70-B40E-4F7E8871A167}|TodoApi.csproj|d:\\univer\\sem_05\\kpz\\todoapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -22,24 +26,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PurchasesController.cs",
-              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\PurchasesController.cs",
-              "RelativeDocumentMoniker": "Controllers\\PurchasesController.cs",
-              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\PurchasesController.cs",
-              "RelativeToolTip": "Controllers\\PurchasesController.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ClientsController.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "Controllers\\ClientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T00:30:31.415Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-06T00:51:52.216Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "ClientViewModel.cs",
+              "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "RelativeDocumentMoniker": "Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "ToolTip": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "RelativeToolTip": "Lab4.Abstraction\\ViewModels\\ClientViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T00:52:19.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Client.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Lab4.DAL\\Models\\Client.cs",
               "RelativeDocumentMoniker": "Lab4.DAL\\Models\\Client.cs",
@@ -52,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Univer\\Sem_05\\KPZ\\TodoApi\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -60,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAEoAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T23:03:48.388Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T23:03:48.388Z"
             }
           ]
         }

@@ -1,21 +1,17 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { RouterModule, Routes } from '@angular/router';
+import { ClientTableComponent } from './features/client.table/client.table.component';
+import { PurchaseTableComponent } from './features/purchase.table/purchase.table.component';
 
-export const routes: Routes = [{
-    path:"clients",
-    loadComponent: () => import('./features/client.table/client.table.component').then(
-        (c)=> c.ClientTableComponent
-    ),
-},
-{
-    path:"purchases",
-    loadComponent: () => import('./features/purchase.table/purchase.table.component').then(
-        (c) => c.PurchaseTableComponent
-    ),
-},
-{
-    path:"contracts",
-    loadComponent: () => import('./features/contract.table/contract.table.component').then(
-        (c)=> c.ContractTableComponent
-    ),
-},
+const routes: Routes = [
+  { path: 'clients', component: ClientTableComponent },
+  { path: 'purchases', component: PurchaseTableComponent },
+  { path: '', redirectTo: '/clients', pathMatch: 'full' }, // Перенаправлення на "Clients" за замовчуванням
+  { path: '**', redirectTo: '/clients' }, // Обробка невідомих шляхів
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule {}
