@@ -12,10 +12,4 @@ export const routes: Routes = [{
         (c) => c.PurchaseTableComponent
     ),
 },
-{
-    path:"contracts",
-    loadComponent: () => import('./features/contract.table/contract.table.component').then(
-        (c)=> c.ContractTableComponent
-    ),
-},
 ];

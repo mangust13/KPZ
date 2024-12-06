@@ -17,8 +17,4 @@ export class HeaderComponent {
   navigateToPurchases() {
     this.router.navigate(['/purchases']);
   }
-
-  navigateToContracts() {
-    this.router.navigate(['/contracts']);
-  }
 }
