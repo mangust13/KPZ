@@ -1,6 +1,8 @@
-<div class="header-container">
+<div class="columns-container">
   <h1>Clients</h1>
-  <button (click)="onAdd()" class="add-button">{{ showAddForm ? 'Hide form' : 'Add client' }}</button>
+  <button (click)="onAdd()" class="add-button">
+    <i class="fas fa-plus"></i> Add
+  </button>
 </div>
 
 
@@ -58,12 +60,14 @@
   </form>
 </div>
 
+<!-- Таблиця -->
 <table *ngIf="!isLoading && !errorMessage">
   <thead>
     <tr>
       <th>Name</th>
       <th>Gender</th>
       <th>Phone Number</th>
+      <th></th>
     </tr>
   </thead>
   <tbody>
@@ -72,9 +76,15 @@
       <td>{{ client.gender }}</td>
       <td>{{ client.phoneNumber || '—' }}</td>
       <td>
-        <button (click)="onEdit(client)" class="edit-button">Редагувати</button>
-        <button (click)="onDelete(client.id)" class="delete-button">Видалити</button>
-      </td>
+        <div class="actions-container">
+          <button (click)="onEdit(client)" class="edit-button">
+            <i class="fas fa-pen"></i>
+          </button>
+          <button (click)="onDelete(client.id)" class="delete-button">
+            <i class="fas fa-trash"></i>
+          </button>
+        </div>
+      </td>      
     </tr>
   </tbody>
 </table>

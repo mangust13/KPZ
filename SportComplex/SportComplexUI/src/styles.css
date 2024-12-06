@@ -1,97 +1,164 @@
-/* Головний контейнер для всього додатка */
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Прибираємо прокручування у всього документа */
+  background-color: #1a1a1a;
+  color: white;
+}
+
+/* Гголовний контейнер */
 .app-container {
   display: grid;
   grid-template-columns: 260px 1fr;
   height: 100vh;
+  overflow: hidden;
 }
 
 /* Контейнер для контенту */
 .content-container {
-  margin-left: 60px;
+  overflow-y: auto;
+  overflow-y: auto;
+  margin: 0 10px;
   padding: 30px;
-  background-color: #f9f9f9;
-  overflow-y: auto; 
+  background-color: #1a1a1a;
   min-height: 100vh;
+  box-sizing: border-box;;
 }
 
-
-/* client.table.component.css */
+/* Таблиці */
 .client-table {
-  margin: 30px auto; /* Додаємо відступи зверху/знизу */
-  padding: 15px; /* Збільшуємо внутрішні відступи */
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для покращення вигляду */
+  width: 100%;
+  background-color: #1a1a1a;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 table {
   width: 100%;
-  border-collapse: collapse;
-  table-layout: auto; /* Автоматичний розподіл ширини колонок */
-}
-
-table th, table td {
-  padding: 14px 16px; /* Більший відступ у комірках */
-  text-align: left;
-  border-bottom: 1px solid #ddd;
-}
-
-table th {
-  background-color: #333;
+  border-collapse: separate;
   color: white;
 }
 
-table tr:hover {
-  background-color: #f1f1f1;
+table th {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 16px;
+  text-align: left;
+  font-weight: 500;
+  border: 1px solid #333; 
 }
 
-  /* Стиль для загальної кнопки додавання */
-  .add-button {
-    background-color: #007bff; /* Синій фон */
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 5px;
-    font-size: 14px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
+table td {
+  padding: 16px;
+  background-color: #2a2a2a;
+  border: 1px solid #333; 
+}
+
+table tr:hover td{
+  background-color: #333;
+}
+
+/* Кнопка додавання */
+.add-button {
+  background-color: #3466e8;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
 
 .add-button:hover {
-  background-color: #0056b3;
+  background-color: #2952c8;
 }
 
 .add-button i {
   font-size: 16px; /* Розмір іконки */
 }
 
-/* Стиль для кнопок дій (редагувати, видалити) */
+/* Стовпці таблиці */
+.columns-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  color: white;
+}
+
+.columns-container h1 {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Кнопки редагування, видалення */
+.actions-container {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 .edit-button,
 .delete-button {
-  padding: 5px 10px;
-  margin: 0 5px;
+  padding: 6px 10px;
+  margin: 0 4px;
   font-size: 14px;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
 }
 
 .edit-button {
-  background-color: #2196F3;
-  color: white;
+  color: #2196f3;
 }
 
 .edit-button:hover {
-  background-color: #1976D2;
+  background-color: rgba(33, 150, 243, 0.1);
 }
 
 .delete-button {
-  background-color: #f44336;
-  color: white;
+  color: #f44336;
 }
 
 .delete-button:hover {
-  background-color: #d32f2f;
+  background-color: rgba(244, 67, 54, 0.1);
 }
+
+.edit-button i,
+.delete-button i {
+  font-size: 20px;
+}
+
+/* Модальне вікно */
+.modal-content {
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.form-group input,
+.form-group select {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  color: white;
+}
+
+.save-button {
+  background-color: #3466e8;
+}
+
+.save-button:hover {
+  background-color: #2952c8;
+}
+
+
