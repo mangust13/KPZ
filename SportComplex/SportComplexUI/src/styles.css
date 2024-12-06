@@ -1,32 +1,49 @@
+/* Головний контейнер для всього додатка */
+.app-container {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  height: 100vh;
+}
+
+/* Контейнер для контенту */
+.content-container {
+  margin-left: 60px;
+  padding: 30px;
+  background-color: #f9f9f9;
+  overflow-y: auto; 
+  min-height: 100vh;
+}
+
+
 /* client.table.component.css */
 .client-table {
-    margin: 20px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-  }
-  
-  table th, table td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  table th {
-    background-color: #f2f2f2;
-  }
-  
-  table tr:hover {
-    background-color: #f9f9f9;
-  }
-  
+  margin: 30px auto; /* Додаємо відступи зверху/знизу */
+  padding: 15px; /* Збільшуємо внутрішні відступи */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тінь для покращення вигляду */
+  overflow: hidden;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Автоматичний розподіл ширини колонок */
+}
+
+table th, table td {
+  padding: 14px 16px; /* Більший відступ у комірках */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #333;
+  color: white;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+}
 
 
 

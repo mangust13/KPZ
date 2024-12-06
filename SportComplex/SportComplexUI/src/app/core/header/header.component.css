@@ -1,55 +1,65 @@
-/* Стилі для навігаційного меню */
+/* Стилі для бічної панелі */
 .navbar {
-    display: flex;
-    gap: 15px;
-    background-color: #333;
-    padding: 10px;
-  }
-  
-  .navbar ul {
-    display: flex;
-    list-style: none;
-  }
-  
-  .navbar li {
-    margin-right: 10px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-
-  /* Бокова панель */
-.navbar {
+  background-color: #1c1c1c;
+  color: #fff;
+  padding: 20px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #1c1c1c;
-  padding: 20px;
-  height: 100vh;
+  gap: 10px;
   width: 250px;
   position: fixed;
   left: 0;
   top: 0;
-  overflow-y: auto;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-  z-index: 1000;
+  bottom: 0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Основний вміст */
-.main-content {
-  margin-left: 250px;
-  padding: 20px;
-  background-color: #f8f9fa;
-  min-height: 100vh;
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-  
+.navbar li {
+  margin-bottom: 10px;
+}
+
+.navbar button {
+  width: 100%;
+  padding: 10px 15px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar button:hover {
+  background-color: #555;
+}
+
+.navbar-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.navbar-logo {
+  width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.navbar-header h1 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.navbar-footer {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
