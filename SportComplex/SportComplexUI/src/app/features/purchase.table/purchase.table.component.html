@@ -1,0 +1,59 @@
+<h1>Таблиця покупок</h1>
+
+<div *ngIf="isLoading">Завантаження...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<!-- Кнопка для додавання покупки -->
+<button (click)="onAdd()" class="add-button">{{ showAddForm ? 'Сховати форму' : 'Додати покупку' }}</button>
+
+<!-- Форма для додавання нової покупки -->
+<div *ngIf="showAddForm">
+  <h3>Додати нову покупку</h3>
+  <input [(ngModel)]="newPurchase.clientFullName" placeholder="Ім'я та прізвище" />
+  <input [(ngModel)]="newPurchase.paymentMethodName" placeholder="Метод покупки" />
+  <input [(ngModel)]="newPurchase.purchaseDate" placeholder="Дата покупки" />
+  <input [(ngModel)]="newPurchase.purchaseNumber" placeholder="Номер покупки" />
+  <input [(ngModel)]="newPurchase.subscriptionId" placeholder="Підписка" />
+
+  <button (click)="addPurchase()">Додати покупку</button>
+</div>
+
+<!-- Форма редагування -->
+<div *ngIf="showEditForm">
+  <h3>Редагування покупку</h3>
+  <form (ngSubmit)="updatePurchase()">
+    <input [(ngModel)]="selectedPurchase.clientFullName" name="clientFullName" placeholder="Ім'я та прізвище" required />
+    <input [(ngModel)]="selectedPurchase.paymentMethodName" name="paymentMethodName" placeholder="Метод покупки" required />
+    <input [(ngModel)]="selectedPurchase.purchaseDate" name="purchaseDate" placeholder="Дата покупки" required />
+    <input [(ngModel)]="selectedPurchase.purchaseNumber" name="purchaseNumber" placeholder="Номер покупки" required />
+    <input [(ngModel)]="selectedPurchase.subscriptionId" name="subscriptionId" placeholder="Підписка" required />
+
+    <button type="submit">Оновити покупку</button>
+    <button type="button" (click)="cancelEdit()">Скасувати</button>
+  </form>
+</div>
+
+<table *ngIf="!isLoading && !errorMessage">
+  <thead>
+    <tr>
+      <th>Client name</th>
+      <th>Payment method</th>
+      <th>Purchase date</th>
+      <th>Purchase number</th>
+      <th>Subscription id</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let purchase of purchases">
+      <td>{{ purchase.clientFullName }}</td>
+      <td>{{ purchase.paymentMethodName }}</td>
+      <td>{{ purchase.purchaseDate || '—' }}</td>
+      <td>{{ purchase.purchaseNumber || '—' }}</td>
+      <td>{{ purchase.subscriptionId || '—' }}</td>
+      <td>
+        <button (click)="onEdit(purchase)" class="edit-button">Редагувати</button>
+        <button (click)="onDelete(purchase.id)" class="delete-button">Видалити</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

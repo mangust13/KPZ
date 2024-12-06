@@ -1,0 +1,30 @@
+/* Стилі для навігаційного меню */
+.navbar {
+    display: flex;
+    gap: 15px;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  .navbar li {
+    margin-right: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

@@ -1,0 +1,14 @@
+// src/assets/styles/mixins.scss
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    border: none;
+    border-radius: $button-radius;
+    padding: $button-padding;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: darken($bg-color, $hover-darken);
+    }
+  }
+  

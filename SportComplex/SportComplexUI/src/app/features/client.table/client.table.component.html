@@ -1,0 +1,49 @@
+<h1>Таблиця клієнтів</h1>
+
+<div *ngIf="isLoading">Завантаження...</div>
+<div *ngIf="errorMessage">{{ errorMessage }}</div>
+
+<!-- Кнопка для відкриття форми додавання клієнта -->
+<button (click)="onAdd()" class="add-button">{{ showAddForm ? 'Сховати форму' : 'Додати клієнта' }}</button>
+
+<!-- Форма для додавання нового клієнта -->
+<div *ngIf="showAddForm">
+  <h3>Додати нового клієнта</h3>
+  <input [(ngModel)]="newClient.fullName" placeholder="Ім'я та прізвище" />
+  <input [(ngModel)]="newClient.gender" placeholder="Стать" />
+  <input [(ngModel)]="newClient.phoneNumber" placeholder="Телефон" />
+  <button (click)="addClient()">Додати клієнта</button>
+</div>
+
+<!-- Форма редагування -->
+<div *ngIf="showEditForm">
+  <h3>Редагування клієнта</h3>
+  <form (ngSubmit)="updateClient()">
+    <input [(ngModel)]="selectedClient.fullName" name="fullName" placeholder="Ім'я та прізвище" required />
+    <input [(ngModel)]="selectedClient.gender" name="gender" placeholder="Стать" required />
+    <input [(ngModel)]="selectedClient.phoneNumber" name="phoneNumber" placeholder="Телефон" required />
+    <button type="submit">Оновити клієнта</button>
+    <button type="button" (click)="cancelEdit()">Скасувати</button>
+  </form>
+</div>
+
+<table *ngIf="!isLoading && !errorMessage">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Phone Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>{{ client.fullName }}</td>
+      <td>{{ client.gender }}</td>
+      <td>{{ client.phoneNumber || '—' }}</td>
+      <td>
+        <button (click)="onEdit(client)" class="edit-button">Редагувати</button>
+        <button (click)="onDelete(client.id)" class="delete-button">Видалити</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
